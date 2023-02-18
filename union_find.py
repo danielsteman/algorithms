@@ -1,3 +1,18 @@
+"""
+See which items belong to a group:
+
+N = [0,1,1,8,8,0,0,1,8,8]
+
+for i in set(N):
+    print(f"{[j for j in range(len(N)) if N[j] == i ]} are connected.")
+
+>>>
+
+[0, 5, 6] are connected.
+[1, 2, 7] are connected.
+[3, 4, 8, 9] are connected.
+"""
+
 from typing import List
 
 
