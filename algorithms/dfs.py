@@ -5,10 +5,14 @@ def dfs(tree, start):
     nodes = []
 
     while stack:
-        node = stack.pop()
+        print(f"stack: {stack}")
+        node = stack.pop()  # get last item from stack
+        print(f"node: {node}")
         if node not in visited:
             visited.add(node)
-            nodes.append(node)
             stack.extend(reversed(tree[node]))
+
+            # keep track of traversed nodes
+            nodes.append(node)
 
     return nodes
